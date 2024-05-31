@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claudia Koerner - Contact</title>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aclonica&family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link href="img/dragonfly-logo.png" rel="shortcut icon" />
+  <script src="https://kit.fontawesome.com/dbf39d3a22.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- This is a HTML comment; it won’t be visible in the browser -->
+  <header class="page-header">
+    <img src="img/dragonfly-light.svg" alt="a picture of a dragonfly in a mix of blue and pink colouring"
+      class="page-header__item">
+    <nav class="page-header__item">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="container">
+    <h1>Contact</h1>
+    <div class="contact3">
+      <div class="form">
+        <h1>Send me a message</h1>
+        <form action="submit" method="post">
+          <label for="firstname">First Name</label>
+          <input type="text" id="firstname" name="firstname" placeholder="Your first name">
+          <br><br>
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" name="lastname" placeholder="Your last name">
+          <br><br>
+          <label for="email">*Email</label>
+          <input type="email" id="contact-email" name="email" placeholder="Your email address" required>
+          <br><br>
+          <label for="message">*Message</label><br><br>
+          <textarea id="message" name="message" placeholder="Your Message" style="height:100px" required
+            maxlength="500"></textarea>
+          <br><br>
+          <input type="submit" value="Send">
+        </form>
+      </div>
+      <div>
+        <button class="button__secondary"
+        onclick="window.open('https://us04web.zoom.us/j/3548975064?pwd=TtKIIfPAXLQnZnvLaJygYPGZgnza9u.1', '_blank');"><i class="fa-solid fa-video"></i>&nbsp;&nbsp; 
+        Catch me on
+        Zoom</button></div>
+       <div><button class="button__secondary"
+        onclick="window.open('mailto:claudia.koerner@gmail.com?subject=Hi%20there&body=Just%20saying%20hi....', '_blank');"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp; Email
+        me</button></div>
+        <div><button onclick="window.open('https://claudiakoerner.me', '_blank');"><i class="fa-brands fa-square-instagram"></i>&nbsp;&nbsp; Follow me on IG</button>
+      </div></div>
+  </section>
+  <footer class="page-footer">
+    <p>Find me on</p>
+    <div class="social-media">
+      <img class="social-media-icon" src="img/github-icon.svg" alt="github">
+      <img src="img/x-icon.svg" alt="twitter">
+      <img src="img/linkedin-icon.svg" alt="linkedin">
+      <br>
+      <a href="#">Back to top</a>
+    </div>
+  </footer>
+  <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>

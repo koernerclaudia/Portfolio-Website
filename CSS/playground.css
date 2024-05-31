@@ -1,0 +1,277 @@
+/*
+Colors in use
+
+Text Color (dark grey): #5d5d5d;
+Backround color ( blue) - 'EAF6F9': 
+Primary Link Color (white): #ffffff; RGB (136, 51, 255);
+Secondary Color (pastel red): #E26464;
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: smaller;
+  line-height: 1.4;
+  background: linear-gradient(to right, #3A9EC1, #6F50EF);
+  color: #3f3f3f
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Aclonica';
+  color: #6F50EF;
+  line-height: 1.2;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ffffff;
+  text-decoration: underline;
+
+}
+
+a:hover,
+a:focus {
+  /* Hover state - focus takes care of highlighting when someone uses keyboard to navigate*/
+  color: #f0dcfe;
+  text-decoration: underline;
+
+}
+
+a:active {
+  /* selected link, current page */
+  color: #f0dcfe;
+  text-decoration: underline;
+
+}
+
+.page-header {
+  display: flex;
+  max-width: 740px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.page-header__item {
+  flex: 0 1 50px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #ffffff
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 740px;
+  max-height: auto;
+  margin: 0 auto 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px 0 rgba(136, 51, 255, 0.3);
+}
+
+/* Treated CSS until here on all pages*/
+
+
+/* Specific for work.html */
+
+.content-employers {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+padding-top: 20px;
+}
+
+.company-logo img {
+  width: auto;
+  height: 30px;
+}
+
+.company-logo:hover img 
+{
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.6;
+}
+
+
+.grid-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid-list__item {
+  /* background-color: #f0dcfe; */
+  padding: 10px;
+}
+
+.grid-list__item img {
+  text-align: center;
+}
+
+button, .button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  width: 180px;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  font-size: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: #6F50EF;
+  color: #ffffff;
+  text-decoration: none;
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 5px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(136, 51, 255, 0.3);
+  transition-duration: 0.5s;
+  transition-property: opacity;
+ }
+
+button:hover,
+button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.6;
+}
+
+.button__secondary {
+  background-color: #3A9EC1;
+  color: #ffffff;
+}
+
+.navigation-list__item--active {
+  text-decoration: underline;
+  color: #6F50EF;
+}
+
+.special-text {
+  background-color: #6F50EF;
+  color: #ffffff;
+}
+
+.profile__portrait {
+  float: left;
+  max-width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.profile__text {
+  float: right;
+  flex-basis: 250px;
+  flex-grow: 1;
+  flex-shrink: 2;
+
+}
+
+
+.contact-list .contact-list__item:nth-child(1) {
+  grid-column-start: 2;
+  background-color: #ffffff;
+}
+
+.contact-list .contact-list__item:nth-child(2) {
+  grid-column-start: 1;
+  background-color: #ffffff;
+}
+
+.contact-list .contact-list__item:nth-child(5) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #ffffff;
+}
+
+.aboutme {
+  display: grid;
+  grid-column: 1;
+  max-width: 740px;
+  margin: 0 auto 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.form {
+  max-width: 400px;
+  max-height: 400px;
+  padding: 20px;
+  border: 1px solid #6F50EF;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+/* 
+media queries */
+
+@media all and (max-width: 500px) {
+  .grid-list {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid-list {
+    grid-gap: 10px;
+  }
+  .grid-list__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 18px;
+  }
+}
