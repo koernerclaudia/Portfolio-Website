@@ -76,11 +76,10 @@ a:active {
 .company-logo img {
   width: auto;
   height: 30px;
-  
+
 }
 
-.company-logo:hover img 
-{
+.company-logo:hover img {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
@@ -141,17 +140,21 @@ a:active {
 /* ---------------- GRIDS ------------------ */
 
 
-.profile  {
+.profile {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
 
-.profile img {
-  max-height: 200px;
-  min-width: 100px;
- 
-}
+  .profile img {
+    max-height: 200px;
+    min-width: 100px;
+    text-align: center;
+  }
+
+  .profile-img__center {
+    text-align: center;
+  }
 
 .employers {
   display: flex;
@@ -166,35 +169,52 @@ a:active {
   padding: 20px;
 }
 
+.current3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+    .current3-item {
+      background-color: #afe1f3;
+      border-radius: 10px;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+  .current3-item:hover {
+    background-color: #ccbdf0;
+    transform: scale(1.05);
+
+  }
+
 .projects3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
 }
 
-.projects3 div {
-  background-color: #afe1f3;
-  border-radius: 10px;
-  padding: 10px;
-  transition: background-color 0.3s ease;
-  cursor: pointer; 
-}
+    .projects3-item {
+      background-color: #afe1f3;
+      border-radius: 10px;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
 
-.projects3 div:hover {
-  background-color: #ccbdf0;
-  transform: scale(1.05);
+  .projects3-item:hover {
+    background-color: #ccbdf0;
+    transform: scale(1.05);
 
-}
-.projects3 img {
-  text-align: center;
-}
+  }
 
-.projects3 div:nth-child(3) {
-grid-row-start: span 2;
-}
+  .projects3-item:nth-child(3) {
+    grid-row-start: span 2;
+  }
 
-.projects3 div:nth-child(6) {
-  grid-column-start: span 3;
+  .projects3-item:nth-child(6) {
+    grid-column-start: span 3;
   }
 
 .contact3 {
@@ -202,13 +222,10 @@ grid-row-start: span 2;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
 }
-.contact3 div {
-  text-align: center;
-}
 
 .contact3 div:nth-child(1) {
-grid-row-start: span 4;
-grid-column-start: span 2;
+  grid-row-start: span 4;
+  grid-column-start: span 2;
 }
 
 .locations {
@@ -224,8 +241,17 @@ grid-column-start: span 2;
   width: 100%;
 }
 
+.profile,
+.locations div {
+  flex-grow: 1;
+  flex-shrink: 2;
+  padding: 15px;
 
-button, .button {
+}
+
+
+button,
+.button {
   /* overwrites browser defaults and resets the border */
   border: none;
   min-width: 180px;
@@ -243,7 +269,7 @@ button, .button {
   border-bottom: 2px solid rgba(136, 51, 255, 0.3);
   transition-duration: 0.5s;
   transition-property: opacity;
- }
+}
 
 button:hover,
 button:focus,
@@ -260,57 +286,6 @@ button:focus,
   color: #ffffff;
 }
 
-/* Treated CSS until here on all pages*/
-
-
-
-
-
-/* INDEX - PROFIL */
-
-.container__profile, .container__about {
-  display: flex;
-  max-width: 740px;
-  max-height: auto;
-  margin: 0 auto 15px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 0 10px 0 rgba(136, 51, 255, 0.3);
-}
-
-
-
-
-
-
-
-/* CONTACT */
-
-
-
-.grid3-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.grid3-list__item {
-  /* background-color: #f0dcfe; */
-  padding: 10px;
-  text-align: center;
-}
-
-.grid3-list__item img {
-  text-align: center;
-}
-
-/* CONTACT */
-
-
-
-
-
-
 .special-text {
   background-color: #6F50EF;
   color: #ffffff;
@@ -322,21 +297,6 @@ button:focus,
   border-radius: 50%;
 }
 
-.profile, .locations div {
-  flex-grow: 1;
-  flex-shrink: 2;
-  padding: 15px;
-
-}
-
-.try-bg {
-  background-image: url('contactpicture.png');
-  width: 100%;
-    height: auto;
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-}
 
 .aboutme {
   display: grid;
@@ -349,30 +309,53 @@ button:focus,
 }
 
 .form {
+  display: block;
   max-width: 500px;
-  max-height: 400px;
+  max-height: auto;
   padding: 20px;
   margin: 0 15px 15px 15px;
   border: 1px solid #6F50EF;
   border-radius: 5px;
   background-color: #ffffff;
+
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 @keyframes color-change {
   0% {
     fill: #fcffad;
   }
+
   25% {
     fill: #edc655;
   }
+
   50% {
     fill: #ef8b55;
   }
-    75% {
-      fill: #f76414; 
-    }
+
+  75% {
+    fill: #f76414;
+  }
+
   100% {
-      fill: #f73838;
+    fill: #f73838;
   }
 }
 
@@ -380,17 +363,21 @@ button:focus,
   0% {
     fill: #fcffad;
   }
+
   25% {
     fill: #edc655;
   }
+
   50% {
     fill: #ef8b55;
   }
-    75% {
-      fill: #f76414; 
-    }
+
+  75% {
+    fill: #f76414;
+  }
+
   100% {
-      fill: #f73838;
+    fill: #f73838;
   }
 }
 
@@ -407,6 +394,7 @@ button:focus,
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
@@ -428,6 +416,7 @@ button:focus,
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
@@ -441,23 +430,31 @@ button:focus,
 media queries */
 
 @media all and (max-width: 500px) {
-  .contact3, .locations, .projects3, .profile {
+
+  .contact3,
+  .locations,
+  .projects3,
+  .profile,
+  .current3 {
     grid-template-columns: 1fr;
   }
 
-  .profile div:nth-child(1) {
-    order: 2;
+  .profile div:nth-child(2) {
+    order: 1;
   }
 
   .locations div:nth-child(1) {
     order: 1;
   }
+
   .locations div:nth-child(2) {
     order: 2;
   }
+
   .locations div:nth-child(3) {
     order: 4;
   }
+
   .locations div:nth-child(4) {
     order: 3;
   }
@@ -481,10 +478,10 @@ media queries */
   .contact3 div:nth-child(1) {
     grid-row-start: span 1;
     grid-column-start: span 1;
-    }
+  }
 
   .container {
-    padding:5px;
+    padding: 5px;
   }
 
   .employers {
@@ -492,54 +489,67 @@ media queries */
     flex-direction: column;
     width: 100%;
   }
+
   .employers div {
     padding: 20px;
   }
 
-  .projects3 div:nth-child(3) {
+  .projects3-item:nth-child(3) {
     grid-row-start: span 1;
     grid-column-start: span 1;
-    }
+  }
 
-    .projects3 div:nth-child(6) {
-      grid-row-start: span 1;
-      grid-column-start: span 1;
-      }
+  .projects3-item:nth-child(6) {
+    grid-row-start: span 1;
+    grid-column-start: span 1;
+  }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
-  .locations, .projects3  {
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+
+  .locations,
+  .projects3,
+  .current3 {
     grid-template-columns: 1fr 1fr;
   }
+
   .contact3 div:nth-child(1) {
     grid-row-start: span 1;
     grid-column-start: span 1;
-    }
+  }
+
   .contact3 {
     grid-template-columns: 1fr;
   }
 
-  .profile  {
+  .profile {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
 
-  .projects3 div:nth-child(3) {
+  .projects3-item:nth-child(3) {
     grid-row-start: span 1;
     grid-column-start: span 1;
-    }
+  }
 
-    .projects3 div:nth-child(6) {
-      grid-row-start: span 1;
-      grid-column-start: span 1;
-      }
+  .projects3-item:nth-child(6) {
+    grid-row-start: span 1;
+    grid-column-start: span 1;
+  }
 
 
 }
+
 @media all and (max-width: 750px) {
-  .contact3, .locations, .projects3 {
+
+  .contact3,
+  .locations,
+  .projects3,
+  .current3 {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 18px;
   }
