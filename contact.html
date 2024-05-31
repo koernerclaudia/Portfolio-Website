@@ -19,6 +19,7 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
   <link href="img/dragonfly-logo.png" rel="shortcut icon" />
   <script src="https://kit.fontawesome.com/dbf39d3a22.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -48,22 +49,34 @@
     <div class="contact3">
       <div class="form">
         <h1>Send me a message</h1>
-        <form action="submit" method="post">
-          <label for="firstname">First Name</label>
-          <input type="text" id="firstname" name="firstname" placeholder="Your first name">
-          <br><br>
+        <form id="contactForm" method="post" action="submit">
+          <label for="firstname">First Name*</label>
+          <input type="text" id="firstname" name="firstname" placeholder="Your first name" required>
+          
           <label for="lastname">Last Name</label>
           <input type="text" id="lastname" name="lastname" placeholder="Your last name">
-          <br><br>
-          <label for="email">*Email</label>
-          <input type="email" id="contact-email" name="email" placeholder="Your email address" required>
-          <br><br>
-          <label for="message">*Message</label><br><br>
-          <textarea id="message" name="message" placeholder="Your Message" style="height:100px" required
-            maxlength="500"></textarea>
-          <br><br>
-          <input type="submit" value="Send">
-        </form>
+          
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" required placeholder="Your Email address">
+          
+          <label for="purpose">What are you after?</label>
+          <select id="purpose" name="purpose" required>
+              <option value="">Select an option</option>
+              <option value="casual_chat">Casual chat</option>
+              <option value="admin_consultancy">Admin Consultancy</option>
+              <option value="nocode_application">NoCode Application</option>
+              <option value="pitch_deck">Pitch Deck</option>
+              <option value="web_application">Web Application</option>
+              <option value="branding">Branding</option>
+              <option value="other">Other</option>
+          </select>
+          
+
+          <label for="message">Please provide more context*</label>
+          <textarea id="message" name="message" maxlength="500" required placeholder="Max 500 characters"></textarea>
+          <button type="submit">Submit</button>
+      </form>
+  
       </div>
       <div>
         <button class="button__secondary"
@@ -86,6 +99,29 @@
       <a href="#">Back to top</a>
     </div>
   </footer>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let isValid = true;
+        const inputs = document.querySelectorAll('input, select, textarea');
+        
+        inputs.forEach(input => {
+            if (!input.checkValidity()) {
+                isValid = false;
+                input.style.borderColor = 'red';
+            } else {
+                input.style.borderColor = '#ccc';
+            }
+        });
+        
+        if (isValid) {
+            alert('Form submitted successfully!');
+            // Here you can add code to actually submit the form data if needed
+        } else {
+            alert('Please fill out all fields correctly.');
+        }
+    });
+</script>
   <script src="js/tota11y.min.js"></script>
 </body>
 
