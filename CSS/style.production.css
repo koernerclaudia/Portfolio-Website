@@ -13,28 +13,40 @@ body {
   min-height: 1500px;
 }
 
-h1,
-h2,
+h1 {
+  font-family: "Aclonica";
+  color: #6F50EF;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Aclonica";
+  color: #6F50EF;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 700;
+}
+
 h3 {
   font-family: "Aclonica";
   color: #6F50EF;
   line-height: 1.2;
   text-align: center;
+  font-weight: 700;
 }
 
 h1 {
   font-size: 24px;
-  font-weight: 700;
 }
 
 h2 {
   font-size: 20px;
-  font-weight: 700;
 }
 
 h3 {
   font-size: 16px;
-  font-weight: 700;
 }
 
 a {
@@ -47,7 +59,13 @@ a:visited {
   text-decoration: underline;
 }
 
-a:hover,
+a:hover {
+  /* Hover state - focus takes care of highlighting when someone uses keyboard to navigate*/
+  color: #f0dcfe;
+  text-decoration: underline;
+  transition: ease-in 0.5s;
+}
+
 a:focus {
   /* Hover state - focus takes care of highlighting when someone uses keyboard to navigate*/
   color: #f0dcfe;
@@ -229,7 +247,26 @@ a:active {
   padding: 15px;
 }
 
-button,
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  min-width: 180px;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  font-size: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: #6F50EF;
+  color: #ffffff;
+  text-decoration: none;
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px 15px 10px 15px;
+  border-radius: 10px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(136, 51, 255, 0.3);
+  transition-duration: 0.5s;
+  transition-property: opacity;
+}
+
 .button {
   /* overwrites browser defaults and resets the border */
   border: none;
@@ -293,7 +330,7 @@ button:focus,
   padding: 20px;
   margin: 0 15px 15px 15px;
   border: 1px solid #6F50EF;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #ffffff;
 }
 
@@ -303,14 +340,30 @@ label {
   font-weight: bold;
 }
 
-input,
-select,
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
 textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 10px;
   box-sizing: border-box;
 }
 
@@ -392,73 +445,58 @@ textarea {
 media queries */
 @media all and (max-width: 500px) {
   .contact3,
-.locations,
-.projects3,
-.profile,
-.current3 {
+  .locations,
+  .projects3,
+  .profile,
+  .current3 {
     grid-template-columns: 1fr;
   }
-
   .profile div:nth-child(2) {
     order: 1;
   }
-
   .locations div:nth-child(1) {
     order: 1;
   }
-
   .locations div:nth-child(2) {
     order: 2;
   }
-
   .locations div:nth-child(3) {
     order: 4;
   }
-
   .locations div:nth-child(4) {
     order: 3;
   }
-
   .locations div:nth-child(5) {
     order: 5;
   }
-
   .locations div:nth-child(6) {
     order: 6;
   }
-
   .locations div:nth-child(7) {
     order: 8;
   }
-
   .locations div:nth-child(8) {
     order: 7;
   }
-
   .contact3 div:nth-child(1) {
     grid-row-start: span 1;
     grid-column-start: span 1;
   }
-
   .container {
     padding: 5px;
   }
-
   .employers {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
-
   .employers div {
     padding: 20px;
   }
-
   .projects3-item:nth-child(3) {
     grid-row-start: span 1;
     grid-column-start: span 1;
   }
-
   .projects3-item:nth-child(6) {
     grid-row-start: span 1;
     grid-column-start: span 1;
@@ -466,30 +504,25 @@ media queries */
 }
 @media all and (min-width: 500px) and (max-width: 750px) {
   .locations,
-.projects3,
-.current3 {
+  .projects3,
+  .current3 {
     grid-template-columns: 1fr 1fr;
   }
-
   .contact3 div:nth-child(1) {
     grid-row-start: span 1;
     grid-column-start: span 1;
   }
-
   .contact3 {
     grid-template-columns: 1fr;
   }
-
   .profile {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
-
   .projects3-item:nth-child(3) {
     grid-row-start: span 1;
     grid-column-start: span 1;
   }
-
   .projects3-item:nth-child(6) {
     grid-row-start: span 1;
     grid-column-start: span 1;
@@ -497,21 +530,18 @@ media queries */
 }
 @media all and (max-width: 750px) {
   .contact3,
-.locations,
-.projects3,
-.current3 {
+  .locations,
+  .projects3,
+  .current3 {
     grid-column: auto/auto;
     grid-row: auto/auto;
   }
-
   h1 {
     font-size: 18px;
   }
-
   h2 {
     font-size: 16px;
   }
-
   h3 {
     font-size: 14px;
   }
