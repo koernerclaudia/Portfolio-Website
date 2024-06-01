@@ -7,7 +7,7 @@
   <title>Contact Claudia Koerner</title>
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -52,42 +52,47 @@
         <form id="contactForm" method="post" action="submit">
           <label for="firstname">First Name*</label>
           <input type="text" id="firstname" name="firstname" placeholder="Your first name" required>
-          
+
           <label for="lastname">Last Name</label>
           <input type="text" id="lastname" name="lastname" placeholder="Your last name">
-          
+
           <label for="email">Email*</label>
           <input type="email" id="email" name="email" required placeholder="Your Email address">
-          
+
           <label for="purpose">What are you after?</label>
           <select id="purpose" name="purpose" required>
-              <option value="">Select an option</option>
-              <option value="casual_chat">Casual chat</option>
-              <option value="admin_consultancy">Admin Consultancy</option>
-              <option value="nocode_application">NoCode Application</option>
-              <option value="pitch_deck">Pitch Deck</option>
-              <option value="web_application">Web Application</option>
-              <option value="branding">Branding</option>
-              <option value="other">Other</option>
+            <option value="">Select an option</option>
+            <option value="casual_chat">Casual chat</option>
+            <option value="admin_consultancy">Admin Consultancy</option>
+            <option value="nocode_application">NoCode Application</option>
+            <option value="pitch_deck">Pitch Deck</option>
+            <option value="web_application">Web Application</option>
+            <option value="branding">Branding</option>
+            <option value="other">Other</option>
           </select>
-          
+
 
           <label for="message">Please provide more context*</label>
           <textarea id="message" name="message" maxlength="500" required placeholder="Max 500 characters"></textarea>
           <button type="submit">Submit</button>
-      </form>
-  
+        </form>
+
       </div>
       <div>
         <button class="button__secondary"
-        onclick="window.open('https://us04web.zoom.us/j/3548975064?pwd=TtKIIfPAXLQnZnvLaJygYPGZgnza9u.1', '_blank');"><i class="fa-solid fa-video"></i>&nbsp;&nbsp; 
-        Catch me on
-        Zoom</button></div>
-       <div><button class="button__secondary"
-        onclick="window.open('mailto:claudia.koerner@gmail.com?subject=Hi%20there&body=Just%20saying%20hi....', '_blank');"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp; Email
-        me</button></div>
-        <div><button onclick="window.open('https://claudiakoerner.me', '_blank');"><i class="fa-brands fa-square-instagram"></i>&nbsp;&nbsp; Follow me on IG</button>
-      </div></div>
+          onclick="window.open('https://us04web.zoom.us/j/3548975064?pwd=TtKIIfPAXLQnZnvLaJygYPGZgnza9u.1', '_blank');"><i
+            class="fa-solid fa-video"></i>&nbsp;&nbsp;
+          Catch me on
+          Zoom</button>
+      </div>
+      <div><button class="button__secondary"
+          onclick="window.open('mailto:claudia.koerner@gmail.com?subject=Hi%20there&body=Just%20saying%20hi....', '_blank');"><i
+            class="fa-solid fa-envelope"></i>&nbsp;&nbsp; Email
+          me</button></div>
+      <div><button onclick="window.open('https://claudiakoerner.me', '_blank');"><i
+            class="fa-brands fa-square-instagram"></i>&nbsp;&nbsp; Follow me on IG</button>
+      </div>
+    </div>
   </section>
   <footer class="page-footer">
     <p>Find me on</p>
@@ -100,28 +105,28 @@
     </div>
   </footer>
   <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        let isValid = true;
-        const inputs = document.querySelectorAll('input, select, textarea');
-        
-        inputs.forEach(input => {
-            if (!input.checkValidity()) {
-                isValid = false;
-                input.style.borderColor = 'red';
-            } else {
-                input.style.borderColor = '#ccc';
-            }
-        });
-        
-        if (isValid) {
-            alert('Form submitted successfully!');
-            // Here you can add code to actually submit the form data if needed
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      let isValid = true;
+      const inputs = document.querySelectorAll('input, select, textarea');
+
+      inputs.forEach(input => {
+        if (!input.checkValidity()) {
+          isValid = false;
+          input.style.borderColor = 'red';
         } else {
-            alert('Please fill out all fields correctly.');
+          input.style.borderColor = '#ccc';
         }
+      });
+
+      if (isValid) {
+        alert('Form submitted successfully!');
+        // Here you can add code to actually submit the form data if needed
+      } else {
+        alert('Please fill out all fields correctly.');
+      }
     });
-</script>
+  </script>
   <script src="js/tota11y.min.js"></script>
 </body>
 
