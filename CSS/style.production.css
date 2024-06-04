@@ -18,7 +18,7 @@ h1 {
   color: #6f50ef;
   line-height: 1.2;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h2 {
@@ -26,7 +26,7 @@ h2 {
   color: #6f50ef;
   line-height: 1.2;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h3 {
@@ -34,7 +34,7 @@ h3 {
   color: #6f50ef;
   line-height: 1.2;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h1 {
@@ -79,8 +79,12 @@ a:active {
   text-decoration: underline;
 }
 
-.company-logo img {
+.company.logo {
   width: auto;
+  text-align: center;
+}
+
+.company-logo img {
   height: 30px;
 }
 
@@ -133,7 +137,6 @@ a:active {
 
 .container {
   max-width: 740px;
-  max-height: auto;
   min-width: 280px;
   margin: 0 auto 15px;
   background-color: #fff;
@@ -172,24 +175,24 @@ a:active {
   padding: 20px;
 }
 
-.current3 {
+/* .current3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
 }
 
 .current3-item {
-  background-color: #afe1f3;
-  border-radius: 10px;
+  background-color: var(--box-color);
+  border-radius: var(--border-radius);
   padding: 10px;
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
 
 .current3-item:hover {
-  background-color: #f0dcfe;
-  transform: scale(1.05);
-}
+  background-color: var(--secondary-link-color);
+  transform: scale (0.95);
+} */
 
 .projects3 {
   display: grid;
@@ -207,14 +210,14 @@ a:active {
 
 .projects3-item:hover {
   background-color: #f0dcfe;
-  transform: scale(1.05);
-}
-
-.projects3-item:nth-child(3) {
-  grid-row-start: span 2;
+  transform: scale(0.95);
 }
 
 .projects3-item:nth-child(6) {
+  grid-row-start: span 2;
+}
+
+.projects3-item:nth-child(9) {
   grid-column-start: span 3;
 }
 
@@ -286,7 +289,7 @@ button {
   color: #fff;
   text-decoration: none;
 
-  /* *adds spacing to the button (this will be discussed more in-depth later) */
+  /* adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px 15px;
   border-radius: 10px;
 
@@ -336,7 +339,6 @@ button:focus,
 .form {
   display: block;
   max-width: 500px;
-  max-height: auto;
   padding: 20px;
   margin: 0 15px 15px;
   border: 1px solid #6f50ef;
@@ -467,12 +469,13 @@ textarea {
 
 /*
 media queries */
+
 @media all and (max-width: 500px) {
   .contact3,
   .locations,
   .projects3,
-  .profile,
-  .current3 {
+  .profile
+  /* .current3  */ {
     grid-template-columns: 1fr;
   }
 
@@ -531,12 +534,12 @@ media queries */
     padding: 20px;
   }
 
-  .projects3-item:nth-child(3) {
+  .projects3-item:nth-child(6) {
     grid-row-start: span 1;
     grid-column-start: span 1;
   }
 
-  .projects3-item:nth-child(6) {
+  .projects3-item:nth-child(9) {
     grid-row-start: span 1;
     grid-column-start: span 1;
   }
@@ -544,8 +547,7 @@ media queries */
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .locations,
-  .projects3,
-  .current3 {
+  .projects3 {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -563,12 +565,13 @@ media queries */
     grid-gap: 20px;
   }
 
-  .projects3-item:nth-child(3) {
+  .projects3-item:nth-child(6) {
     grid-row-start: span 1;
     grid-column-start: span 1;
+    order: 7;
   }
 
-  .projects3-item:nth-child(6) {
+  .projects3-item:nth-child(9) {
     grid-row-start: span 1;
     grid-column-start: span 1;
   }
@@ -577,8 +580,7 @@ media queries */
 @media all and (max-width: 750px) {
   .contact3,
   .locations,
-  .projects3,
-  .current3 {
+  .projects3 {
     grid-column: auto/auto;
     grid-row: auto/auto;
   }
