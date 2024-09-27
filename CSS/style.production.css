@@ -71,7 +71,7 @@ a:visited {
 
 a:hover {
   /* Hover state - focus takes care of highlighting when someone uses keyboard to navigate */
-  color: #f0dcfe;
+  color: #000;
   text-decoration: underline;
   -webkit-transition: ease-in 0.5s;
   -o-transition: ease-in 0.5s;
@@ -80,7 +80,7 @@ a:hover {
 
 a:focus {
   /* Hover state - focus takes care of highlighting when someone uses keyboard to navigate */
-  color: #f0dcfe;
+  color: #000;
   text-decoration: underline;
   -webkit-transition: ease-in 0.5s;
   -o-transition: ease-in 0.5s;
@@ -89,7 +89,7 @@ a:focus {
 
 a:active {
   /* selected link, current page */
-  color: #f0dcfe;
+  color: #000;
   text-decoration: underline;
 }
 
