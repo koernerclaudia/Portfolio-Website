@@ -2,7 +2,7 @@
   --primary-color: #6f50ef;
   --secondary-color: #3a9ec1;
   --primary-link-color: #fff;
-  --secondary-link-color: #f0dcfe;
+  --secondary-link-color: #B3DDF2;
   --box-color: #afe1f3;
   --text-color: #3f3f3f;
   --max-box-width: 740px;
@@ -26,7 +26,7 @@ body {
 
 h1,
 h2,
-h3 {
+h3 { 
   font-family: "Aclonica";
   color: var(--primary-color);
   line-height: 1.2;
@@ -192,25 +192,33 @@ a:active {
 }
 
 .projects3-item {
-  background-color: var(--box-color);
+  border: 1px solid var(--box-color);
   border-radius: var(--border-radius);
   padding: 10px;
   transition: background-color 0.3s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
 .projects3-item:hover {
   background-color: var(--secondary-link-color);
-  transform: scale(0.95);
+  transform: scale(1.05);
 }
 
-.projects3-item:nth-child(6) {
+.project-logo {
+  max-width: 200px;
+  margin: auto;
+}
+
+/* .projects3-item:nth-child(9) {
   grid-row-start: span 2;
 }
 
-.projects3-item:nth-child(9) {
+.projects3-item:nth-child(12) {
   grid-column-start: span 3;
-}
+} */
 
 .contact3 {
   display: grid;
@@ -247,6 +255,7 @@ button,
   /* overwrites browser defaults and resets the border */
   border: none;
   min-width: 180px;
+  margin-bottom: 5px;
 
   /* takes the font from the outer container */
   font-family: inherit;
@@ -282,6 +291,8 @@ button:focus,
   background-color: var(--secondary-color);
   color: var(--primary-link-color);
 }
+
+
 
 .special-text {
   background-color: var(--primary-color);
@@ -320,16 +331,33 @@ label {
   font-weight: bold;
 }
 
+button.project-button {
+  max-width: 150px;
+  margin: 5px;
+ 
+}
+
 input,
 select,
 textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: var(--border-radius);
   box-sizing: border-box;
 }
+
+.input-wrapper {
+  margin-bottom: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.6em;
+}
+
+
 
 @keyframes color-change {
   0% {
@@ -457,14 +485,6 @@ media queries */
 
   .locations div:nth-child(6) {
     order: 6;
-  }
-
-  .locations div:nth-child(7) {
-    order: 8;
-  }
-
-  .locations div:nth-child(8) {
-    order: 7;
   }
 
   .contact3 div:nth-child(1) {
