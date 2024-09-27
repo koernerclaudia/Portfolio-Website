@@ -208,8 +208,13 @@ a:active {
 }
 
 .project-logo {
-  max-width: 200px;
-  margin: auto;
+  max-height: 100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.project-logo img {
+  text-align: center;
 }
 
 /* .projects3-item:nth-child(9) {
