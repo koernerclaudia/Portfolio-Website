@@ -1,9 +1,9 @@
 :root {
-    --cerebra-green: #4D635E;
+    --primary-color: purple;
     --portfolio-background-light: #ffffff;
-    --cerebra-beige: #FBF0E3;
-    --cerebra-brown: #6E5F4F;
-    --text-color: #ffffff;
+    --second-color: orange;
+    --third-color: #blue;
+    --text-color: #292929;
     --max-box-width: 1000px;
     --max-green-box: 320px;
     --border-radius: 20px;
@@ -20,6 +20,10 @@
     background-color: var(--portfolio-background-light);
     max-width: var(--max-box-width);
     margin: 0 auto;
+    border-bottom: 1px solid purple;
+    border-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    
   }
   
   a {

@@ -1,0 +1,36 @@
+.custom-card {
+    border-radius: 50px;
+  }
+
+  .nav-link {        /* Rounded corners */
+    border: 2px solid transparent; /* Optional border for button */
+    background-color: #violet;     /* Button background color */
+    color: white;                  /* Text color */
+    text-align: center;            /* Center text inside button */
+    display: inline-block;         /* Ensure button-like appearance */
+    text-decoration: none;         /* Remove underline from links */
+    font-size: 16px;               /* Font size adjustment */
+  }
+
+  /* Hover effect for buttons */
+.nav-link:hover {
+  background-color: #0056b3; /* Change color on hover */
+  color: #fff;              /* Text color on hover */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Custom media query for collapsing below 500px */
+@media (max-width: 500px) {
+  .navbar-expand-lg {
+    flex-direction: column;
+  }
+  .navbar-collapse {
+    flex-direction: column;
+  }
+  .navbar-nav {
+    width: 100%;
+  }
+  .navbar-toggler {
+    float: right;
+  }
+}
