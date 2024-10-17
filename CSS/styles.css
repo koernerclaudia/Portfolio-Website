@@ -3,9 +3,9 @@
   --secondary-color: #3a9ec1;
   --primary-link-color: #fff;
   --secondary-link-color: #B3DDF2;
-  --box-color: #afe1f3;
+  --box-color: #6f50ef;
   --text-color: #3f3f3f;
-  --max-box-width: 740px;
+  --max-box-width: 1200px;
   --border-radius: 10px;
 }
 
@@ -16,12 +16,13 @@
 body {
   font-family: "Inter", sans-serif;
   font-weight: 300;
-  font-size: smaller;
+  font-size: 18px;
   line-height: 1.4;
   background: linear-gradient(to bottom, var(--secondary-color), #0a95c7, var(--primary-color));
   color: var(--text-color);
   height: auto;
   min-height: 1500px;
+  margin: 15px;
 }
 
 h1,
@@ -30,18 +31,23 @@ h3 {
   font-family: "Aclonica";
   color: var(--primary-color);
   line-height: 1.2;
-  text-align: center;
   font-weight: 600;
+  text-align: center;
 }
 
+// section headings
 h1 {
-  font-size: 24px;
+  font-size: 32px;
+  padding: 20px;
 }
 
+// smaller heading
 h2 {
-  font-size: 20px;
+  font-size: 18px;
+ 
 }
 
+// section headings
 h3 {
   font-size: 16px;
 }
@@ -132,8 +138,9 @@ a:active {
   margin: 0 auto 15px;
   background-color: var(--primary-link-color);
   border-radius: var(--border-radius);
-  padding: 15px;
+  padding: 25px;
   box-shadow: 0 0 10px 0 rgba(136, 51, 255, 0.3);
+  overflow: hidden;
 }
 
 /* ---------------- GRIDS ------------------ */
@@ -188,29 +195,32 @@ a:active {
 .projects3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 15px;
+  grid-gap: 35px;
 }
 
 .projects3-item {
+  width: auto;
   border: 1px solid var(--box-color);
   border-radius: var(--border-radius);
-  padding: 10px;
+  padding: 15px;
   transition: background-color 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .projects3-item:hover {
-  background-color: var(--secondary-link-color);
-  transform: scale(1.05);
+  background-color: rgba(111, 80, 239, 0.3); /* 30% opacity */
+  transform: scale(1.02);
 }
 
 .project-logo {
-  max-height: 100px;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
+  object-fit: cover;
 }
 
 .project-logo img {
@@ -227,13 +237,22 @@ a:active {
 
 .contact3 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-gap: 15px;
 }
 
-.contact3 div:nth-child(1) {
+bold {
+  font-weight: 600;
+}
+
+/* .contact3 div:nth-child(1) {
   grid-row-start: span 4;
   grid-column-start: span 2;
+} */
+
+
+.work-img {
+  object-fit: cover;
 }
 
 .locations {
@@ -455,6 +474,28 @@ textarea {
 /*
 media queries */
 
+@media all and (max-width: 1100px) {
+
+  .contact3,
+  .locations,
+  .projects3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+}
+
+
 @media all and (max-width: 500px) {
   .contact3,
   .locations,
@@ -554,23 +595,3 @@ media queries */
   }
 }
 
-@media all and (max-width: 750px) {
-  .contact3,
-  .locations,
-  .projects3 {
-    grid-column: auto/auto;
-    grid-row: auto/auto;
-  }
-
-  h1 {
-    font-size: 18px;
-  }
-
-  h2 {
-    font-size: 16px;
-  }
-
-  h3 {
-    font-size: 14px;
-  }
-}
