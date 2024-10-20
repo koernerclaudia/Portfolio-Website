@@ -76,10 +76,20 @@ a:active {
   text-decoration: underline;
 }
 
+a.text-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+
 th, td {
   text-align: center; /* Center horizontally */
   vertical-align: middle; /* Center vertically */
   border: 1px solid black; 
+}
+
+td ul {
+  text-align: left;
 }
 
 .company.logo {
