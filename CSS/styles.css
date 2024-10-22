@@ -76,6 +76,22 @@ a:active {
   text-decoration: underline;
 }
 
+a.text-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+
+th, td {
+  text-align: center; /* Center horizontally */
+  vertical-align: middle; /* Center vertically */
+  border: 1px solid black; 
+}
+
+td ul {
+  text-align: left;
+}
+
 .company.logo {
   width: auto;
   text-align: center;
@@ -138,7 +154,7 @@ a:active {
   margin: 0 auto 15px;
   background-color: var(--primary-link-color);
   border-radius: var(--border-radius);
-  padding: 25px;
+  padding: 35px;
   box-shadow: 0 0 10px 0 rgba(136, 51, 255, 0.3);
   overflow: hidden;
 }
@@ -260,6 +276,15 @@ bold {
   grid-template-columns: 50% 50%;
 }
 
+.cvsection {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.cvsection img {
+  width: 100%;
+}
+
 /* .locations div:nth-child(5), div:nth-child(6){
   grid-column-start: span 2;
 } */
@@ -278,7 +303,6 @@ button,
 .button {
   /* overwrites browser defaults and resets the border */
   border: none;
-  min-width: 180px;
   margin-bottom: 5px;
 
   /* takes the font from the outer container */
